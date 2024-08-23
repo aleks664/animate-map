@@ -1,0 +1,33 @@
+$animate-time: 0.3s;
+
+.new-map {
+  width: 100%;
+  height: 100%;
+  svg {
+    display: block;
+    width: 100%;
+    height: 100%;
+  }
+  text,
+  tspan {
+  }
+  .txt-zone {
+    pointer-events: none;
+  }
+  [id^='zone-'] {
+    cursor: pointer;
+    &.is-hide {
+      display: none;
+    }
+    &:not(.is-active) .city,
+    .txt-zone {
+      pointer-events: none;
+    }
+    &:not(.is-active) .txt-zone,
+    &:not(.is-active) .city,
+    &:not(.is-active) .contour {
+      opacity: 0;
+      transition: opacity 0.3s;
+    }
+  }
+}

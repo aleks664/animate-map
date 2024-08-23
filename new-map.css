@@ -1,0 +1,28 @@
+.new-map {
+  width: 100%;
+  height: 100%;
+}
+.new-map svg {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+.new-map .txt-zone {
+  pointer-events: none;
+}
+.new-map [id^=zone-] {
+  cursor: pointer;
+}
+.new-map [id^=zone-].is-hide {
+  display: none;
+}
+.new-map [id^=zone-]:not(.is-active) .city,
+.new-map [id^=zone-] .txt-zone {
+  pointer-events: none;
+}
+.new-map [id^=zone-]:not(.is-active) .txt-zone, .new-map [id^=zone-]:not(.is-active) .city, .new-map [id^=zone-]:not(.is-active) .contour {
+  opacity: 0;
+  transition: opacity 0.3s;
+}
+
+/*# sourceMappingURL=new-map.css.map */
